@@ -5,8 +5,8 @@ package com.company;
 
 class Zada4a {
     public static void main(String[] args) {
-        double m=8.45;
-        double n=10.15;
+        double m=1;
+        double n=1;
         double x=10;
 
        double a = Math.abs(x-m);
