@@ -5,10 +5,11 @@ package Exercise5;
  */
 public class Shape {
     int getPerimetr() {
-    return 0;
+        return 0;
     }
-        int getArea(){
-            return 0;
+
+    int getArea() {
+        return 0;
     }
 }
 
