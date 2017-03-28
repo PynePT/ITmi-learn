@@ -3,16 +3,19 @@ package Zada4a;
 Комментарии излишни
 */
 public class Zada4a {
-    public static void main(String[] args) {
-        int x = 2;
-        int y = 12;
-
-        /*x = x * 3;*/
-        y = x + y;
-        x = y - x;
-        y = y - x;
-
-        System.out.println(x);
-        System.out.println(y);
+    public static int min(int a,int b) {
+        int min;
+        if (a < b)
+            min = a;
+        else
+            min = b;
+        return min;
     }
+    public static void main(String[] args) throws Exception {
+        System.out.println(min(12, 33));
+        System.out.println(min(-20, 0));
+        System.out.println(min(-10, -20));
+    }
+
+
 }

@@ -12,7 +12,8 @@ public class Circle extends Shape{
     public int getPerimetr(){
         return(int)(2*P1*r);
     }
-    public int getArea(){return (int)(P1*r*r);
+    public int getArea(){
+        return (int)(P1*r*r);
     }
 }
 
