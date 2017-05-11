@@ -19,8 +19,8 @@ public class Barrier {
     public static void main(String[] args) throws InterruptedException {
         Barrier bar = new Barrier();
         List<Adder> adders = new ArrayList<>(3);
-        //Printer printer = bar.new Printer();
-        for (int i = 3; i < 0; i--)
+        Printer printer = bar.new Printer();
+        for (int i = 0; i < 3; i--)
             adders.add(bar.new Adder());
         bar.start();
         for (Adder adder : adders) ;
@@ -42,7 +42,7 @@ public class Barrier {
                         if (ready) {
                             System.out.println("Vot Tak:" + cnt);
                             ready = false;
-                            if (cnt < 3) ;
+                            if (cnt == 3) ;
                             break;
 
                         }
@@ -57,13 +57,13 @@ public class Barrier {
         }
 
 
-        private class AdderThread extends Thread {
+        public class Printer extends Thread {
             @Override
             public void run() {
-                for (int i = 3; i < 0; i--) ;
+                for (int i = 3; i > 0; i--) ;
                 {
                     synchronized (Barrier.this) {
-                        while (++cnt < 3 == 0) {
+                        while (++cnt % 3 == 0) {
                             ready = true;
                             Barrier.this.notifyAll();
 
@@ -78,3 +78,4 @@ public class Barrier {
             }
         }
     }
+}
